@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moviez/shared/theme.dart';
-import 'package:moviez/ui/widgets/build_Title.dart';
+import 'package:moviez/ui/widgets/build_slider.dart';
+import 'package:moviez/ui/widgets/build_title.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,10 +10,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        children: [buildTitle()],
-      ),
+      body: SafeArea(
+          child: Column(
+        children: [
+          buildTitle(),
+          buildSlider(),
+        ],
+      )),
     );
   }
 }

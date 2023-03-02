@@ -12,27 +12,34 @@ Widget buildTitle() {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Moviez',
-              style: blueTextStyle.copyWith(
-                fontSize: 28,
-                fontWeight: black,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Moviez',
+                style: blueTextStyle.copyWith(
+                  fontSize: 28,
+                  fontWeight: black,
+                ),
               ),
             ),
             const SizedBox(
-              height: 2,
+              height: 4,
             ),
-            Text(
-              'Watch much easier',
-              style: greyTextStyle.copyWith(
-                fontSize: 16,
-                fontWeight: semibold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Text(
+                'Watch much easier',
+                style: greyTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semibold,
+                ),
               ),
             )
           ],
         ),
         Container(
-          width: 22,
+          margin: const EdgeInsets.symmetric(horizontal: 14),
+          width: 25,
           height: 45,
           decoration: const BoxDecoration(
               image:
